@@ -22,6 +22,7 @@ class CountryArrayAdapter(context: Context, countryList: List<Country>) : ArrayA
         val country = getItem(position)
 
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.spinner_item, parent, false)
+        //convertview will reuse view if not null as recycler elce create a view
         view.countryImage.setImageResource(country!!.image)
         view.countryName.text = country.name
 
